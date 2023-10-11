@@ -3,7 +3,7 @@ use crate::VariantType;
 use once_cell::sync::Lazy;
 use regex::Regex;
 
-static REGEX_ALLELES: Lazy<Regex> = Lazy::new(|| Regex::new(r"\A[ACGT]+\z").unwrap());
+static REGEX_ALLELES: Lazy<Regex> = Lazy::new(|| Regex::new(r"\A[ACGTURYKMSWBDHVN]+\z").unwrap());
 
 pub fn normalize<'a>(
     position: u64,
